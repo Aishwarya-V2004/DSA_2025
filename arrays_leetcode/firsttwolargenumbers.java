@@ -6,6 +6,7 @@ public class firsttwolargenumbers {
     public static int[] sort(int[] arr) {
         int n = arr.length;
 
+        // Check if the array has fewer than two elements
         if (n < 2) {
             System.out.println("Array must have at least two elements.");
             return new int[0]; // Return an empty array
@@ -14,18 +15,10 @@ public class firsttwolargenumbers {
         // Step 1: Sort the array
         Arrays.sort(arr);
 
-        // Step 2: Remove duplicates
-        int count = 1; // At least one unique element exists
-        for (int i = 1; i < n; i++) {
-            if (arr[i] != arr[i - 1]) {
-                count++;
-            }
-        }
-
-        // Create a new array for unique elements
-        int[] unique = new int[count];
-        unique[0] = arr[0];
-        int index = 1;
+        // Step 2: Remove duplicates and collect unique elements
+        int[] unique = new int[n];
+        int index = 0;
+        unique[index++] = arr[0];
 
         for (int i = 1; i < n; i++) {
             if (arr[i] != arr[i - 1]) {
@@ -34,13 +27,13 @@ public class firsttwolargenumbers {
         }
 
         // If there are fewer than two unique elements
-        if (unique.length < 2) {
+        if (index < 2) {
             System.out.println("No second largest element exists.");
-            return new int[0]; // Return an empty array
+            return new int[0];
         }
 
         // Return the last two unique elements
-        return new int[]{unique[unique.length - 1], unique[unique.length - 2]};
+        return new int[]{unique[index - 1], unique[index - 2]};
     }
 
     public static void main(String[] args) {
