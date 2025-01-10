@@ -28,7 +28,7 @@ public class buyingandsellingstock {
 
     public static void main(String[] args) {
         int[] prices = {7, 1, 5, 3, 6, 4};
-
+        System.out.println("so the maximum profit will be");
         System.out.println(maxProfit(prices));
     }
 }
