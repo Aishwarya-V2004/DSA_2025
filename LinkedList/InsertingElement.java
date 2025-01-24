@@ -16,6 +16,7 @@ package LinkedList;
 //singlyLinkedList.tail.value    // 10
 //----------------------------------------------------------------------
 
+
 class Node{
     public Node next;
     public int value;
@@ -49,12 +50,9 @@ class SinglyLL {
             tail = node;
             size++;
         }
-
-
     }
 
 }
-
 
 public class InsertingElement {
     public static void main(String[] args) {
