@@ -56,11 +56,12 @@ class SinglyLL5 {
     //Remove
     public Node remove(int index) {
         if (index<0 || index >= size) {
+            System.out.println("invalid value");
             return null;
         }
         Node removeNode;
         Node currentNode;
-        size--;
+
         if (index == 0) {
             removeNode = head;
             if (head == tail) {
@@ -77,8 +78,8 @@ class SinglyLL5 {
                 indx ++;
             }
             removeNode = currentNode.next;
-            Node nextNode = currentNode.next;
-            currentNode.next = nextNode.next;
+            currentNode.next=currentNode.next.next;
+            size--;
             return removeNode;
 
 
@@ -97,6 +98,8 @@ public class removeelement_specificlocation {
         obj.push(20);
         obj.remove(0);
         System.out.println(obj.head.value);
+        obj.remove(10);
+
 
 
     }
