@@ -3,7 +3,6 @@ package circularlylinkedlist;
 class Node{
     Node next;
     int value;
-    int height;
 }
 class circularlyLL {
     Node head = null;
