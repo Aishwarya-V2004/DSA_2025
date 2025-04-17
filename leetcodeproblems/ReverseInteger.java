@@ -1,5 +1,7 @@
 package leetcodeproblems;
 
+//reversing the digits of the given number
+
 public class ReverseInteger {
     public static int reverse(int x) {
         int reversed = 0;
