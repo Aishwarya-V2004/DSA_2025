@@ -60,5 +60,6 @@ public class Edit_distance {
 
         int result = minDistance(word1, word2);
         System.out.println("Minimum operations: " + result); // Output: 3
+
     }
 }
